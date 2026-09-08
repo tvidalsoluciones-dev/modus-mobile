@@ -488,6 +488,67 @@
       font-weight: 700;
     }
 
+    .user-lead-form {
+      margin: 18px 0 20px;
+      padding: 16px;
+      background: #FFFFFF;
+      border: 1px solid var(--border-soft);
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+
+    .form-instruction {
+      display: block;
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--accent-warm);
+      margin-bottom: 12px;
+      text-align: left;
+    }
+
+    .lead-fields-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    @media (min-width: 600px) {
+      .lead-fields-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .lead-field {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      text-align: left;
+    }
+
+    .lead-field label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .lead-field input {
+      padding: 11px 14px;
+      border-radius: 10px;
+      border: 1.5px solid var(--border-soft);
+      background: var(--bg-main);
+      color: var(--text-main);
+      font-size: 0.92rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .lead-field input:focus {
+      border-color: var(--accent-caramel);
+      box-shadow: 0 0 0 3px rgba(194, 65, 12, 0.1);
+      background: #FFFFFF;
+    }
+
     .btn-wa-quote {
       background: var(--accent-green);
       color: #000000;
@@ -983,6 +1044,22 @@
               Riesgo para fotos y bancos: <strong>0.0% (Sin formatear)</strong>
             </div>
           </div>
+
+          <!-- Formulario de Datos del Usuario -->
+          <div class="user-lead-form">
+            <span class="form-instruction">Completa tus datos para personalizar tu diagnóstico en WhatsApp:</span>
+            <div class="lead-fields-grid">
+              <div class="lead-field">
+                <label for="leadName">👤 Tu Nombre:</label>
+                <input type="text" id="leadName" placeholder="Ej: Sandra o Carlos" oninput="updateResult()">
+              </div>
+              <div class="lead-field">
+                <label for="leadLocation">📍 Tu Barrio o Ciudad:</label>
+                <input type="text" id="leadLocation" placeholder="Ej: Ciudad Jardín, Cali / Remoto" oninput="updateResult()">
+              </div>
+            </div>
+          </div>
+
           <a id="btnWaResult" href="#" target="_blank" rel="noopener" class="btn-wa-quote">
             Agendar Puesta a Punto por WhatsApp con este Diagnóstico 💬
           </a>
@@ -1244,8 +1321,25 @@
         statBloat.innerHTML = "Procesos basura detectables: <strong>15 a 25 servicios</strong>";
       }
 
-      // Encode custom WhatsApp message
-      const textMsg = `Hola Tomás, hice el diagnóstico en la página para mi ${selectedBrand}. Presenta: ${selectedSymptom.text.replace(/^[^\s]+\s/, '')}. Me interesa agendar la Puesta a Punto en Cali. ¿Qué disponibilidad tienes?`;
+      // Customer Form Details
+      const leadName = (document.getElementById('leadName') ? document.getElementById('leadName').value : '').trim();
+      const leadLoc = (document.getElementById('leadLocation') ? document.getElementById('leadLocation').value : '').trim();
+      const symptomClean = selectedSymptom.text.replace(/^[^\s]+\s/, '');
+
+      // Structured Rich WhatsApp Message
+      let textMsg = `👋 *¡Hola Tomás! Acabo de hacer el diagnóstico en la web de Modus Mobile.*\n\n`;
+      textMsg += `📋 *Ficha de mi Solicitud:*\n`;
+      if (leadName) {
+        textMsg += `• *Nombre:* ${leadName}\n`;
+      }
+      if (leadLoc) {
+        textMsg += `• *Ubicación:* ${leadLoc}\n`;
+      }
+      textMsg += `• *Equipo:* ${selectedBrand}\n`;
+      textMsg += `• *Molestia:* ${symptomClean}\n\n`;
+      textMsg += `⚡ *Me interesa aprovechar el Bono de Inauguración ($50.000 COP).*\n`;
+      textMsg += `¿Qué disponibilidad de agenda tienes para coordinar la cita?`;
+
       const encodedMsg = encodeURIComponent(textMsg);
       const waLink = `https://wa.me/573189308342?text=${encodedMsg}`;
 
