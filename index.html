@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modus Mobile | Tu Celular Rápido y Sin Publicidad — Cali, Colombia</title>
+  
+  <!-- SEO & Open Graph (WhatsApp, Facebook, LinkedIn) -->
+  <meta name="description" content="Servicio profesional en Cali. Recupera la rapidez, batería y espacio de tu celular sin formatear ni perder fotos, chats o bancos.">
+  <meta name="keywords" content="optimizar celular Cali, acelerar celular sin formatear, mantenimiento celulares cali, servicio tecnico celular cali, quitar publicidad xiaomi cali">
+  <meta name="author" content="Modus Mobile">
+  <meta name="theme-color" content="#FAF8F5">
+
+  <!-- Open Graph Protocol (Vista previa enriquecida para WhatsApp) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Modus Mobile">
+  <meta property="og:title" content="Modus Mobile | Tu Celular Rápido y Libre de Publicidad (Sin Formatear)">
+  <meta property="og:description" content="Servicio profesional en Cali. Recupera velocidad y batería sin perder fotos, chats ni bancos. ¡Haz tu diagnóstico gratis aquí!">
+  <meta property="og:image" content="https://tvidalsoluciones-dev.github.io/modus-mobile/og_banner.jpg">
+  <meta property="og:image:secure_url" content="https://tvidalsoluciones-dev.github.io/modus-mobile/og_banner.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:url" content="https://tvidalsoluciones-dev.github.io/modus-mobile/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Modus Mobile | Tu Celular Rápido y Libre de Publicidad">
+  <meta name="twitter:description" content="Servicio profesional en Cali. Aceleración y limpieza sin formatear. Cero riesgo para tus datos.">
+  <meta name="twitter:image" content="https://tvidalsoluciones-dev.github.io/modus-mobile/og_banner.jpg">
+
+  <link rel="icon" type="image/jpeg" href="logo.jpg">
+
+  <!-- Estilos: Warm Boutique Minimalist (Calidez, Madera, Confianza y Luz) -->
+  <style>
+    :root {
+      --bg-main: #FAF8F5;
+      --bg-surface: #FFFFFF;
+      --bg-subtle: #F4EFEA;
+      --text-main: #1F1C19;
+      --text-muted: #665F58;
+      --text-light: #8E857C;
+      --accent-warm: #A0522D;        /* Sienna / Madera cálida */
+      --accent-caramel: #C2410C;     /* Ámbar terracota */
+      --accent-tint: #FFF7ED;        /* Fondo claro del acento */
+      --accent-green: #25D366;       /* WhatsApp */
+      --accent-green-hover: #1EBE5B;
+      --border-soft: #E8E2D8;
+      --border-focus: #C2410C;
+      --shadow-soft: 0 10px 30px rgba(78, 59, 44, 0.06);
+      --shadow-hover: 0 18px 45px rgba(78, 59, 44, 0.12);
+      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-stack);
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header / Nav */
+    header {
+      padding: 16px 0;
+      background: rgba(250, 248, 245, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-soft);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--border-soft);
+    }
+
+    .brand-text h1 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--text-main);
+    }
+
+    .brand-text p {
+      font-size: 0.72rem;
+      color: var(--accent-warm);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+    .btn-nav-wa {
+      background: var(--accent-green);
+      color: #000000;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 9px 18px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.25);
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .btn-nav-wa:hover {
+      background: var(--accent-green-hover);
+      transform: translateY(-1px);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 48px 0 36px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .hero-content {
+      text-align: center;
+    }
+
+    .badge-location {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent-tint);
+      border: 1px solid #FED7AA;
+      color: var(--accent-caramel);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      line-height: 1.22;
+      letter-spacing: -0.8px;
+      color: var(--text-main);
+      margin-bottom: 18px;
+    }
+
+    .hero p.lead {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero p.lead strong {
+      color: var(--accent-caramel);
+      font-weight: 700;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .btn-primary {
+      background: var(--accent-caramel);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 16px 28px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 360px;
+      box-shadow: 0 10px 24px rgba(194, 65, 12, 0.25);
+      transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: #9A3412;
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(194, 65, 12, 0.35);
+    }
+
+    .btn-wa-direct {
+      background: #FFFFFF;
+      border: 1.5px solid var(--border-soft);
+      color: var(--text-main);
+      font-weight: 700;
+      font-size: 0.98rem;
+      padding: 14px 24px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      max-width: 360px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .btn-wa-direct:hover {
+      background: #FFFFFF;
+      border-color: var(--accent-green);
+      color: #128C7E;
+    }
+
+    .hero-image-wrap {
+      display: none;
+      position: relative;
+    }
+
+    .hero-image-wrap img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 24px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-soft);
+    }
+
+    .hero-image-caption {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      padding: 12px 18px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Diagnostic Section */
+    .diagnostic-section {
+      padding: 30px 0 50px;
+    }
+
+    .quiz-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-soft);
+      border-radius: 22px;
+      padding: 32px 24px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+    }
+
+    .quiz-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #C2410C, #F59E0B);
+      border-radius: 22px 22px 0 0;
+    }
+
+    .quiz-header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .quiz-header h3 {
+      font-size: 1.55rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: var(--text-main);
+    }
+
+    .quiz-header p {
+      color: var(--text-muted);
+      font-size: 0.94rem;
+    }
+
+    .step-title {
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: var(--accent-warm);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 10px;
+      margin-bottom: 26px;
+    }
+
+    .opt-btn {
+      background: var(--bg-subtle);
+      border: 1.5px solid transparent;
+      color: var(--text-main);
+      padding: 14px 10px;
+      border-radius: 14px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      min-height: 68px;
+    }
+
+    .opt-btn small {
+      color: var(--text-light);
+      font-weight: 500;
+      font-size: 0.76rem;
+    }
+
+    .opt-btn:hover {
+      background: var(--accent-tint);
+      border-color: #FDBA74;
+    }
+
+    .opt-btn.active {
+      background: var(--accent-tint);
+      border-color: var(--accent-caramel);
+      color: #9A3412;
+      box-shadow: 0 4px 15px rgba(194, 65, 12, 0.12);
+    }
+
+    .opt-btn.active small {
+      color: #C2410C;
+    }
+
+    .symptoms-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .symptom-btn {
+      background: var(--bg-subtle);
+      border: 1.5px solid transparent;
+      color: var(--text-main);
+      padding: 15px 18px;
+      border-radius: 14px;
+      font-size: 0.96rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .symptom-btn:hover {
+      background: var(--accent-tint);
+      border-color: #FDBA74;
+    }
+
+    .symptom-btn.active {
+      background: var(--accent-tint);
+      border-color: var(--accent-caramel);
+      color: #9A3412;
+      font-weight: 700;
+    }
+
+    /* Result Box */
+    .result-box {
+      background: #FFFDF9;
+      border: 1.5px solid #FDBA74;
+      border-radius: 18px;
+      padding: 24px;
+      margin-top: 10px;
+      box-shadow: 0 6px 20px rgba(194, 65, 12, 0.08);
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .result-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .stat-pill {
+      background: #FFFFFF;
+      border: 1px solid var(--border-soft);
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .stat-pill strong {
+      color: var(--accent-caramel);
+      font-weight: 700;
+    }
+
+    .btn-wa-quote {
+      background: var(--accent-green);
+      color: #000000;
+      font-weight: 800;
+      font-size: 1.05rem;
+      padding: 16px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+      transition: all 0.2s ease;
+    }
+
+    .btn-wa-quote:hover {
+      background: var(--accent-green-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(37, 211, 102, 0.4);
+    }
+
+    /* Desktop Callout & QR */
+    .desktop-callout {
+      display: none;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-soft);
+      border-radius: 18px;
+      padding: 24px;
+      margin-top: 30px;
+    }
+
+    .desktop-callout-inner {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .qr-container {
+      background: #FFFFFF;
+      padding: 10px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .qr-container img {
+      width: 130px;
+      height: 130px;
+      display: block;
+    }
+
+    .desktop-text h4 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .desktop-text p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    /* Pricing Section */
+    .pricing-section {
+      padding: 50px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-header h3 {
+      font-size: 1.95rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 0.98rem;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .pricing-card {
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-soft);
+      border-radius: 20px;
+      padding: 30px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      box-shadow: var(--shadow-soft);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .pricing-card.featured {
+      border: 2px solid var(--accent-caramel);
+      background: #FFFFFF;
+    }
+
+    .plan-badge {
+      position: absolute;
+      top: -12px;
+      right: 20px;
+      background: var(--accent-caramel);
+      color: #FFFFFF;
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .plan-name {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .plan-target {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin-bottom: 20px;
+    }
+
+    .plan-price-box {
+      margin-bottom: 22px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .price-old {
+      font-size: 0.92rem;
+      color: var(--text-light);
+      text-decoration: line-through;
+    }
+
+    .price-current {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--text-main);
+      letter-spacing: -0.5px;
+    }
+
+    .price-currency {
+      font-size: 0.95rem;
+      color: var(--accent-warm);
+      font-weight: 700;
+      margin-left: 4px;
+    }
+
+    .plan-features {
+      list-style: none;
+      margin-bottom: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    .plan-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .plan-features li::before {
+      content: "✓";
+      color: var(--accent-caramel);
+      font-weight: 900;
+      font-size: 1rem;
+    }
+
+    .plan-features strong {
+      color: var(--text-main);
+    }
+
+    .btn-plan {
+      width: 100%;
+      padding: 14px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.96rem;
+      text-align: center;
+      background: var(--bg-subtle);
+      color: var(--text-main);
+      border: 1px solid var(--border-soft);
+      transition: all 0.2s;
+      display: block;
+    }
+
+    .btn-plan:hover {
+      background: var(--accent-tint);
+      border-color: var(--accent-caramel);
+      color: #9A3412;
+    }
+
+    .pricing-card.featured .btn-plan {
+      background: var(--accent-green);
+      color: #000000;
+      border-color: var(--accent-green);
+      font-weight: 800;
+    }
+
+    .pricing-card.featured .btn-plan:hover {
+      background: var(--accent-green-hover);
+    }
+
+    /* Trust & Guarantee Badges */
+    .trust-section {
+      padding: 30px 0 50px;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .trust-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      padding: 22px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .trust-icon {
+      font-size: 1.8rem;
+      flex-shrink: 0;
+      background: var(--accent-tint);
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .trust-text h4 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .trust-text p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* FAQ */
+    .faq-section {
+      padding: 40px 0;
+      border-top: 1px solid var(--border-soft);
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .faq-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-soft);
+      border-radius: 14px;
+      padding: 20px 22px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+
+    .faq-item h4 {
+      font-size: 1.02rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .faq-item p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    footer {
+      padding: 44px 0 34px;
+      border-top: 1px solid var(--border-soft);
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-surface);
+    }
+
+    footer a {
+      color: var(--accent-caramel);
+      font-weight: 600;
+    }
+
+    /* Responsive Breakpoints (Desktop) */
+    @media (min-width: 768px) {
+      .hero-ctas {
+        flex-direction: row;
+      }
+      .options-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .stats-row {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .trust-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1.15fr 0.85fr;
+        text-align: left;
+      }
+      .hero-content {
+        text-align: left;
+      }
+      .hero p.lead {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .hero-ctas {
+        justify-content: flex-start;
+      }
+      .hero-image-wrap {
+        display: block;
+      }
+      .desktop-callout {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="container nav-inner">
+      <div class="brand">
+        <img src="logo.jpg" alt="Modus Mobile Logo">
+        <div class="brand-text">
+          <h1>MODUS MOBILE</h1>
+          <p>Cuidado y Rendimiento Móvil</p>
+        </div>
+      </div>
+      <a href="https://wa.me/573189308342?text=Hola%20Tom%C3%A1s%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Modus%20Mobile%20en%20Cali." class="btn-nav-wa" target="_blank" rel="noopener">
+        <span>WhatsApp</span> 💬
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section con la Fotografía Cálida Integrada -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="badge-location">
+          📍 Cali, Colombia • Atención con Cita Previa & Soporte Remoto
+        </div>
+        <h2>¿Tu celular se siente lento, se recalienta o se llena de publicidad molesta?</h2>
+        <p class="lead">
+          Lo dejamos rápido, fresco y libre de anuncios <strong>sin formatear</strong>. Cero riesgo para tus fotos familiares, chats de WhatsApp y aplicaciones bancarias.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#diagnostico" class="btn-primary">
+            Diagnosticar mi Celular Gratis ⚡
+          </a>
+          <a href="https://wa.me/573189308342?text=Hola%20Tom%C3%A1s%2C%20deseo%20agendar%20una%20revisi%C3%B3n%20para%20mi%20celular%20en%20Cali." class="btn-wa-direct" target="_blank" rel="noopener">
+            Hablar por WhatsApp Directo 💬
+          </a>
+        </div>
+      </div>
+
+      <!-- Imagen Cálida en Desktop -->
+      <div class="hero-image-wrap">
+        <img src="og_banner.jpg" alt="Persona feliz usando su celular optimizado">
+        <div class="hero-image-caption">
+          <span>☕ <strong>Atención personalizada en Cali:</strong> Cuidamos tus datos como propios.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diagnostic Tool -->
+  <section id="diagnostico" class="diagnostic-section">
+    <div class="container">
+      <div class="quiz-card">
+        <div class="quiz-header">
+          <h3>Calculador de Rendimiento en Vivo</h3>
+          <p>Toma solo 10 segundos: selecciona tu marca y síntoma para ver cuánto puedes mejorar.</p>
+        </div>
+
+        <!-- Step 1: Brand -->
+        <span class="step-title">1. Selecciona la marca de tu teléfono:</span>
+        <div class="options-grid" id="brandGrid">
+          <button type="button" class="opt-btn active" data-brand="Xiaomi / POCO" onclick="selectBrand(this)">
+            <strong>Xiaomi / POCO</strong>
+            <small>Redmi, HyperOS, MIUI</small>
+          </button>
+          <button type="button" class="opt-btn" data-brand="Samsung" onclick="selectBrand(this)">
+            <strong>Samsung</strong>
+            <small>Galaxy A, S, Z</small>
+          </button>
+          <button type="button" class="opt-btn" data-brand="OPPO / Realme" onclick="selectBrand(this)">
+            <strong>OPPO / Realme</strong>
+            <small>ColorOS, RealmeUI</small>
+          </button>
+          <button type="button" class="opt-btn" data-brand="Motorola" onclick="selectBrand(this)">
+            <strong>Motorola</strong>
+            <small>Moto G, Edge</small>
+          </button>
+          <button type="button" class="opt-btn" data-brand="Tecno / Infinix" onclick="selectBrand(this)">
+            <strong>Tecno / Infinix</strong>
+            <small>Spark, Camon, Note</small>
+          </button>
+          <button type="button" class="opt-btn" data-brand="Apple iPhone" onclick="selectBrand(this)">
+            <strong> Apple iPhone</strong>
+            <small>iOS, 64GB - 512GB</small>
+          </button>
+          <button type="button" class="opt-btn" data-brand="Otra marca" onclick="selectBrand(this)">
+            <strong>Otra marca</strong>
+            <small>Huawei, Vivo, Honor</small>
+          </button>
+        </div>
+
+        <!-- Step 2: Symptom -->
+        <span class="step-title">2. ¿Cuál es la molestia principal que notas?</span>
+        <div class="symptoms-list" id="symptomsList">
+          <!-- Populated dynamically based on brand -->
+        </div>
+
+        <!-- Live Result -->
+        <div class="result-box" id="resultBox">
+          <div class="result-title">
+            <span>⚡ Diagnóstico Preliminar para <span id="resBrandName" style="color: var(--accent-caramel);">Xiaomi / POCO</span>:</span>
+          </div>
+          <div class="stats-row">
+            <div class="stat-pill" id="statRam">
+              Recuperación estimada: <strong>+350 a +550 MB RAM</strong>
+            </div>
+            <div class="stat-pill" id="statBloat">
+              Procesos basura detectables: <strong>15 a 25 servicios</strong>
+            </div>
+            <div class="stat-pill">
+              Riesgo para fotos y bancos: <strong>0.0% (Sin formatear)</strong>
+            </div>
+          </div>
+          <a id="btnWaResult" href="#" target="_blank" rel="noopener" class="btn-wa-quote">
+            Agendar Puesta a Punto por WhatsApp con este Diagnóstico 💬
+          </a>
+        </div>
+
+        <!-- Desktop QR Callout (visible on PC) -->
+        <div class="desktop-callout">
+          <div class="desktop-callout-inner">
+            <div class="qr-container">
+              <img id="qrImage" src="" alt="Código QR WhatsApp Modus Mobile">
+            </div>
+            <div class="desktop-text">
+              <h4>¿Estás navegando desde tu computador?</h4>
+              <p>Apunta la cámara de tu celular a este código QR para abrir el chat de WhatsApp de inmediato con tu diagnóstico pre-cargado. O si estás fuera de Cali, puedes solicitar <strong>Tele-asistencia Remota</strong> conectándolo con cable USB.</p>
+              <a id="btnWebWa" href="#" target="_blank" rel="noopener" class="btn-wa-direct" style="padding: 9px 18px; font-size: 0.88rem; display: inline-flex;">
+                Abrir en WhatsApp Web desde PC ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing-section">
+    <div class="container">
+      <div class="section-header">
+        <h3>Tarifas Claras y Transparentes</h3>
+        <p>Precios justos, sin costos ocultos y con 100% de garantía de tranquilidad.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Plan 1: Flash -->
+        <div class="pricing-card featured">
+          <span class="plan-badge">Bono Inauguración</span>
+          <div>
+            <div class="plan-name">Puesta a Punto Flash</div>
+            <div class="plan-target">El servicio estrella para recuperar la fluidez original</div>
+            <div class="plan-price-box">
+              <span class="price-old">$70.000 COP</span><br>
+              <span class="price-current">$50.000</span>
+              <span class="price-currency">COP</span>
+            </div>
+            <ul class="plan-features">
+              <li>Limpieza profunda de procesos basura del fabricante</li>
+              <li>Bloqueo total de anuncios y notificaciones spam</li>
+              <li>Aceleración de fluidez y respuesta táctil</li>
+              <li>Optimización de consumo y salud de batería</li>
+              <li><strong>100% Sin Formatear</strong> (Fotos y bancos intactos)</li>
+              <li>Garantía de satisfacción por 7 días</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/573189308342?text=Hola%20Tom%C3%A1s%2C%20quiero%20aprovechar%20el%20Bono%20de%20Inauguraci%C3%B3n%20para%20la%20Puesta%20a%20Punto%20Flash%20(%2450.000%20COP)%20en%20Cali." target="_blank" rel="noopener" class="btn-plan">
+            Agendar con Bono ($50.000) ⚡
+          </a>
+        </div>
+
+        <!-- Plan 2: VIP -->
+        <div class="pricing-card">
+          <span class="plan-badge" style="background: var(--accent-warm); color: #fff;">Más Completo</span>
+          <div>
+            <div class="plan-name">Combo Estreno VIP</div>
+            <div class="plan-target">Puesta a punto + Traslado seguro a celular nuevo</div>
+            <div class="plan-price-box">
+              <span class="price-current">$100.000</span>
+              <span class="price-currency">COP</span>
+            </div>
+            <ul class="plan-features">
+              <li>Todo lo de la Puesta a Punto Flash</li>
+              <li>Migración blindada de celular viejo a nuevo</li>
+              <li>WhatsApp completo (chats, fotos, audios y stickers)</li>
+              <li>Traspaso seguro Android a iPhone o viceversa</li>
+              <li>Calibración ergonómica de pantalla y descanso visual</li>
+              <li>Soporte preferencial post-servicio</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/573189308342?text=Hola%20Tom%C3%A1s%2C%20me%20interesa%20el%20Combo%20Estreno%20VIP%20con%20traslado%20seguro%20de%20datos%20(%24100.000%20COP)." target="_blank" rel="noopener" class="btn-plan">
+            Agendar Combo VIP 📱
+          </a>
+        </div>
+
+        <!-- Plan 3: Remoto -->
+        <div class="pricing-card">
+          <span class="plan-badge" style="background: #78716C; color: #fff;">Nacional & Exterior</span>
+          <div>
+            <div class="plan-name">Tele-Asistencia Remota</div>
+            <div class="plan-target">Para clientes fuera de Cali o en el exterior</div>
+            <div class="plan-price-box">
+              <span class="price-current">$80.000</span>
+              <span class="price-currency">COP / $25 USD</span>
+            </div>
+            <ul class="plan-features">
+              <li>Conexión asistida en vivo vía PC + cable USB</li>
+              <li>Mismos resultados de aceleración y bloqueo de spam</li>
+              <li>Sin desplazarte de tu casa o lugar de trabajo</li>
+              <li>Supervisas todo el proceso en la pantalla de tu PC</li>
+              <li>Atención nacional e internacional</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/573189308342?text=Hola%20Tom%C3%A1s%2C%20estoy%20fuera%20de%20Cali%20y%20quiero%20solicitar%20la%20Tele-Asistencia%20Remota%20por%20PC." target="_blank" rel="noopener" class="btn-plan">
+            Solicitar Soporte Remoto 💻
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Badges -->
+  <section class="trust-section">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-card">
+          <div class="trust-icon">🛡️</div>
+          <div class="trust-text">
+            <h4>Cero Formateo</h4>
+            <p>Nunca borramos tu teléfono. Tus fotos familiares, conversaciones y accesos bancarios se mantienen exactamente donde están.</p>
+          </div>
+        </div>
+
+        <div class="trust-card">
+          <div class="trust-icon">🔒</div>
+          <div class="trust-text">
+            <h4>Privacidad Sagrada</h4>
+            <p>Trabajamos exclusivamente a nivel de sistema. No abrimos tus fotos, no leemos tus mensajes ni solicitamos contraseñas personales.</p>
+          </div>
+        </div>
+
+        <div class="trust-card">
+          <div class="trust-icon">☕</div>
+          <div class="trust-text">
+            <h4>Atención con Cita Previa</h4>
+            <p>Servicio exclusivo en Cali con café de cortesía, o asistencia remota en vivo. Atención personalizada sin aglomeraciones.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <h3>Preguntas Frecuentes</h3>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h4>¿Tengo que dejar mi celular varios días?</h4>
+          <p>No. El procedimiento toma habitualmente entre 30 y 45 minutos. Te atendemos con cita previa y te llevas tu celular listo el mismo día.</p>
+        </div>
+        <div class="faq-item">
+          <h4>¿Se van a desconfigurar mis aplicaciones del banco (Bancolombia, Nequi, Daviplata)?</h4>
+          <p>En absoluto. Como no se formatea ni se manipula el sistema de forma invasiva, la seguridad bancaria y tus accesos biométricos siguen funcionando con total normalidad.</p>
+        </div>
+        <div class="faq-item">
+          <h4>¿En qué parte de Cali atienden?</h4>
+          <p>Atendemos bajo estricta cita previa para garantizarte total privacidad y comodidad, o mediante jornadas programadas. Al escribirnos por WhatsApp coordinamos el horario que mejor te convenga.</p>
+        </div>
+        <div class="faq-item">
+          <h4>¿Cómo funciona si tengo un iPhone?</h4>
+          <p>En iPhone nos especializamos en descongestión profunda de almacenamiento ("Almacenamiento casi lleno"), optimización de batería y el traslado blindado de chats de WhatsApp y fotos a tu nuevo equipo sin pérdidas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p style="margin-bottom: 8px;"><strong>MODUS MOBILE</strong> • Cuidado y Optimización Profesional de Dispositivos Móviles</p>
+      <p style="margin-bottom: 8px;">Cali, Colombia • WhatsApp: <a href="https://wa.me/573189308342">+57 318 930 8342</a> • Email: <a href="mailto:t.vidal.soluciones@gmail.com">t.vidal.soluciones@gmail.com</a></p>
+      <p style="font-size: 0.80rem; opacity: 0.7;">© 2026 Modus Mobile — Todos los derechos reservados. No afiliado con Apple, Google ni fabricantes OEM.</p>
+    </div>
+  </footer>
+
+  <!-- Script Interactivo del Diagnóstico y QR -->
+  <script>
+    const symptomsData = {
+      android: [
+        { id: "lento", text: "🐢 Se traba o va muy lento al abrir aplicaciones", desc: "Saturación de RAM por procesos en segundo plano." },
+        { id: "bateria", text: "🔋 La batería se descarga volando o el celular calienta", desc: "Servicios continuos drenando energía innecesariamente." },
+        { id: "publicidad", text: "📢 Me sale publicidad y notificaciones molestas", desc: "Servicios comerciales y anuncios embebidos por el fabricante." },
+        { id: "memoria", text: "💾 Memoria llena (almacenamiento saturado)", desc: "Caché residual y archivos basura acumulados por meses." },
+        { id: "nuevo", text: "📱 Compré celular nuevo y quiero trasladar todo sin pérdidas", desc: "Migración integral de WhatsApp, fotos y cuentas." }
+      ],
+      apple: [
+        { id: "memoria_ios", text: "💾 Aviso constante: 'Almacenamiento de iPhone casi lleno'", desc: "Caché oculta de WhatsApp, Telegram y fotos duplicadas." },
+        { id: "migracion_ios", text: "📱 Pasar datos a iPhone nuevo (o de Android a iPhone)", desc: "Traspaso blindado de chats de WhatsApp, fotos e iCloud." },
+        { id: "bateria_ios", text: "🔋 Batería se agota rápido / Condición de batería", desc: "Ajuste de apps en segundo plano y consumo vampiro." },
+        { id: "privacidad_ios", text: "🔒 Publicidad en Safari y saturación de aplicaciones", desc: "Perfiles de navegación limpia y descongestión de sistema." }
+      ]
+    };
+
+    let selectedBrand = "Xiaomi / POCO";
+    let selectedSymptom = symptomsData.android[0];
+
+    function selectBrand(btnElement) {
+      document.querySelectorAll('#brandGrid .opt-btn').forEach(btn => btn.classList.remove('active'));
+      btnElement.classList.add('active');
+      selectedBrand = btnElement.getAttribute('data-brand');
+      renderSymptoms();
+      updateResult();
+    }
+
+    function selectSymptom(btnElement, symptomObj) {
+      document.querySelectorAll('#symptomsList .symptom-btn').forEach(btn => btn.classList.remove('active'));
+      btnElement.classList.add('active');
+      selectedSymptom = symptomObj;
+      updateResult();
+    }
+
+    function renderSymptoms() {
+      const isApple = selectedBrand === "Apple iPhone";
+      const list = isApple ? symptomsData.apple : symptomsData.android;
+      selectedSymptom = list[0];
+
+      const container = document.getElementById('symptomsList');
+      container.innerHTML = "";
+
+      list.forEach((symptom, index) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'symptom-btn' + (index === 0 ? ' active' : '');
+        btn.innerHTML = `<span>${symptom.text}</span>`;
+        btn.onclick = () => selectSymptom(btn, symptom);
+        container.appendChild(btn);
+      });
+    }
+
+    function updateResult() {
+      const resBrandName = document.getElementById('resBrandName');
+      const statRam = document.getElementById('statRam');
+      const statBloat = document.getElementById('statBloat');
+      const btnWa = document.getElementById('btnWaResult');
+      const btnWebWa = document.getElementById('btnWebWa');
+      const qrImage = document.getElementById('qrImage');
+
+      resBrandName.innerText = selectedBrand;
+
+      if (selectedBrand === "Apple iPhone") {
+        statRam.innerHTML = "Optimización: <strong>Descongestión de Almacenamiento</strong>";
+        statBloat.innerHTML = "Diagnóstico: <strong>Caché oculta & Traslado Seguro</strong>";
+      } else {
+        statRam.innerHTML = "Recuperación estimada: <strong>+350 a +550 MB RAM</strong>";
+        statBloat.innerHTML = "Procesos basura detectables: <strong>15 a 25 servicios</strong>";
+      }
+
+      // Encode custom WhatsApp message
+      const textMsg = `Hola Tomás, hice el diagnóstico en la página para mi ${selectedBrand}. Presenta: ${selectedSymptom.text.replace(/^[^\s]+\s/, '')}. Me interesa agendar la Puesta a Punto en Cali. ¿Qué disponibilidad tienes?`;
+      const encodedMsg = encodeURIComponent(textMsg);
+      const waLink = `https://wa.me/573189308342?text=${encodedMsg}`;
+
+      btnWa.href = waLink;
+      btnWebWa.href = waLink;
+
+      // Update QR Code
+      const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent(waLink)}`;
+      qrImage.src = qrUrl;
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      renderSymptoms();
+      updateResult();
+    });
+  </script>
+</body>
+</html>
