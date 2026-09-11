@@ -1084,6 +1084,65 @@
       color: var(--text-muted);
     }
 
+    /* Compromiso con la Economía Circular */
+    .manifesto-section {
+      padding: 10px 0 45px;
+    }
+
+    .manifesto-card {
+      background: linear-gradient(135deg, #FFFFFF 0%, var(--accent-tint) 100%);
+      border: 1.5px solid #FCD34D;
+      border-left: 6px solid var(--accent-caramel);
+      border-radius: 20px;
+      padding: 30px 28px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+    }
+
+    .manifesto-header {
+      margin-bottom: 14px;
+    }
+
+    .manifesto-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--accent-caramel);
+      background: rgba(194, 65, 12, 0.08);
+      padding: 5px 14px;
+      border-radius: 20px;
+    }
+
+    .manifesto-quote {
+      font-size: 1.16rem;
+      font-weight: 700;
+      line-height: 1.65;
+      color: var(--text-main);
+      font-style: italic;
+      margin: 0 0 16px;
+    }
+
+    .manifesto-signature {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent-warm);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    @media (min-width: 768px) {
+      .manifesto-card {
+        padding: 36px 40px;
+      }
+      .manifesto-quote {
+        font-size: 1.26rem;
+      }
+    }
+
     /* FAQ */
     .faq-section {
       padding: 40px 0;
@@ -1244,6 +1303,7 @@
           <div class="hero-guarantee-item"><span>⚡</span> Respuesta Táctil Inmediata</div>
           <div class="hero-guarantee-item"><span>🛡️</span> 100% Sin Formatear</div>
           <div class="hero-guarantee-item"><span>🔒</span> Fotos y Bancos Intactos</div>
+          <div class="hero-guarantee-item"><span>🌍</span> Economía Circular</div>
         </div>
       </div>
 
@@ -1543,6 +1603,31 @@
             <h4>Atención con Cita Previa</h4>
             <p>Servicio exclusivo en Cali con café de cortesía, o asistencia remota en vivo. Atención personalizada sin aglomeraciones.</p>
           </div>
+        </div>
+
+        <div class="trust-card">
+          <div class="trust-icon">🌍</div>
+          <div class="trust-text">
+            <h4>Economía Circular y Planeta</h4>
+            <p>El celular más ecológico es el que ya tienes en tus manos. Prolongar su vida útil frena la minería destructiva y la chatarra tecnológica global.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compromiso de Economía Circular -->
+  <section class="manifesto-section">
+    <div class="container">
+      <div class="manifesto-card">
+        <div class="manifesto-header">
+          <span class="manifesto-badge">🌍 Compromiso con la Economía Circular</span>
+        </div>
+        <blockquote class="manifesto-quote">
+          “La industria nos programó para comprar, desechar y volver a comprar. Nosotros creemos en afinar, optimizar y conservar. Menos devastación de recursos en el planeta, más dinero en tu cuenta bancaria.”
+        </blockquote>
+        <div class="manifesto-signature">
+          <strong>Modus Mobile</strong> • Cuidado y Rendimiento Móvil Consciente
         </div>
       </div>
     </div>
