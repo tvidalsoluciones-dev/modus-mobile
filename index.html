@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modus Mobile | Tu Celular Rápido y Sin Publicidad — Cali, Colombia</title>
+  <title>Modus Mobile | Tu Celular Rápido, Fresco y con Batería Duradera — Cali, Colombia</title>
   
   <!-- SEO & Open Graph (WhatsApp, Facebook, LinkedIn) -->
-  <meta name="description" content="Servicio profesional en Cali. Recupera la rapidez, batería y espacio de tu celular sin formatear ni perder fotos, chats o bancos.">
-  <meta name="keywords" content="optimizar celular Cali, acelerar celular sin formatear, mantenimiento celulares cali, servicio tecnico celular cali, quitar publicidad xiaomi cali">
+  <meta name="description" content="Servicio profesional en Cali. Recupera la rapidez, alivia el recalentamiento y extiende la duración de tu batería sin formatear ni perder fotos, chats o bancos.">
+  <meta name="keywords" content="optimizar celular Cali, duracion bateria celular cali, enfriar celular cali, acelerar celular sin formatear, mantenimiento celulares cali, quitar publicidad xiaomi cali">
   <meta name="author" content="Modus Mobile">
   <meta name="theme-color" content="#FAF8F5">
 
@@ -488,6 +488,55 @@
       font-weight: 700;
     }
 
+    .cause-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-soft);
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin-bottom: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .cause-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      text-align: left;
+    }
+
+    .cause-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      width: fit-content;
+    }
+
+    .cause-badge.warning {
+      background: #FEF2F2;
+      color: #B91C1C;
+      border: 1px solid #FECACA;
+    }
+
+    .cause-badge.solution {
+      background: #F0FDF4;
+      color: #15803D;
+      border: 1px solid #BBF7D0;
+    }
+
+    .cause-text {
+      font-size: 0.90rem;
+      color: var(--text-main);
+      line-height: 1.45;
+    }
+
     .user-lead-form {
       margin: 18px 0 20px;
       padding: 16px;
@@ -949,14 +998,14 @@
         <div class="badge-location">
           📍 Cali, Colombia • Atención con Cita Previa & Soporte Remoto
         </div>
-        <h2>¿Pensando en comprar otro celular porque el tuyo está lento, caliente o sin espacio?</h2>
+        <h2>¿Pensando en comprar otro celular porque la batería no te dura, se calienta o va muy lento?</h2>
         <p class="lead">
-          No gastes un millón en un teléfono nuevo. Lo dejamos rápido, fresco y libre de publicidad <strong>sin formatear</strong>, con tus fotos y bancos intactos y <strong>sin instalar ninguna aplicación</strong>.
+          No gastes un millón en un teléfono nuevo. <strong>Optimizamos el consumo de tu batería</strong>, enfriamos el procesador y recuperamos la fluidez original <strong>sin formatear</strong>, con tus fotos y bancos intactos y <strong>sin instalar ninguna aplicación</strong>.
         </p>
 
         <div class="hero-ctas">
           <a href="#diagnostico" class="btn-primary">
-            Diagnosticar mi Celular Gratis ⚡
+            Ver Diagnóstico por Marca ⚡
           </a>
           <a href="https://wa.me/573189308342?text=Hola%20Tom%C3%A1s%2C%20deseo%20agendar%20una%20revisi%C3%B3n%20para%20mi%20celular%20en%20Cali." class="btn-wa-direct" target="_blank" rel="noopener">
             Hablar por WhatsApp Directo 💬
@@ -964,8 +1013,9 @@
         </div>
 
         <div class="hero-guarantee-bar">
+          <div class="hero-guarantee-item"><span>🔋</span> Batería Más Duradera & Fresca</div>
+          <div class="hero-guarantee-item"><span>⚡</span> Respuesta Táctil Inmediata</div>
           <div class="hero-guarantee-item"><span>🛡️</span> 100% Sin Formatear</div>
-          <div class="hero-guarantee-item"><span>🚫</span> Cero Apps Instaladas</div>
           <div class="hero-guarantee-item"><span>🔒</span> Fotos y Bancos Intactos</div>
         </div>
       </div>
@@ -985,28 +1035,28 @@
     <div class="container">
       <div class="quiz-card">
         <div class="quiz-header">
-          <h3>Calculador de Rendimiento en Vivo</h3>
-          <p>Toma solo 10 segundos: selecciona tu marca y síntoma para ver cuánto puedes mejorar.</p>
+          <h3>Causas Más Comunes de Falla y Drenaje por Marca</h3>
+          <p>Toca la marca de tu teléfono para conocer qué le está ocurriendo tras bambalinas, por qué la batería no dura y cómo lo solucionamos:</p>
         </div>
 
         <!-- Step 1: Brand -->
-        <span class="step-title">1. Selecciona la marca de tu teléfono:</span>
+        <span class="step-title">1. Selecciona la marca de tu celular:</span>
         <div class="options-grid" id="brandGrid">
-          <button type="button" class="opt-btn active" data-brand="Xiaomi / POCO" onclick="selectBrand(this)">
-            <strong>Xiaomi / POCO</strong>
-            <small>Redmi, HyperOS, MIUI</small>
-          </button>
-          <button type="button" class="opt-btn" data-brand="Samsung" onclick="selectBrand(this)">
+          <button type="button" class="opt-btn active" data-brand="Samsung" onclick="selectBrand(this)">
             <strong>Samsung</strong>
             <small>Galaxy A, S, Z</small>
           </button>
-          <button type="button" class="opt-btn" data-brand="OPPO / Realme" onclick="selectBrand(this)">
-            <strong>OPPO / Realme</strong>
-            <small>ColorOS, RealmeUI</small>
+          <button type="button" class="opt-btn" data-brand="Xiaomi / POCO" onclick="selectBrand(this)">
+            <strong>Xiaomi / POCO</strong>
+            <small>Redmi, HyperOS, MIUI</small>
           </button>
           <button type="button" class="opt-btn" data-brand="Motorola" onclick="selectBrand(this)">
             <strong>Motorola</strong>
             <small>Moto G, Edge</small>
+          </button>
+          <button type="button" class="opt-btn" data-brand="OPPO / Realme" onclick="selectBrand(this)">
+            <strong>OPPO / Realme</strong>
+            <small>ColorOS, RealmeUI</small>
           </button>
           <button type="button" class="opt-btn" data-brand="Tecno / Infinix" onclick="selectBrand(this)">
             <strong>Tecno / Infinix</strong>
@@ -1018,36 +1068,49 @@
           </button>
           <button type="button" class="opt-btn" data-brand="Otra marca" onclick="selectBrand(this)">
             <strong>Otra marca</strong>
-            <small>Huawei, Vivo, Honor</small>
+            <small>Vivo, Huawei, Honor</small>
           </button>
         </div>
 
         <!-- Step 2: Symptom -->
-        <span class="step-title">2. ¿Cuál es la molestia principal que notas?</span>
+        <span class="step-title">2. ¿Cuál es el síntoma principal que notas en el uso diario?</span>
         <div class="symptoms-list" id="symptomsList">
           <!-- Populated dynamically based on brand -->
         </div>
 
-        <!-- Live Result -->
+        <!-- Brand Analysis Result -->
         <div class="result-box" id="resultBox">
           <div class="result-title">
-            <span>⚡ Diagnóstico Preliminar para <span id="resBrandName" style="color: var(--accent-caramel);">Xiaomi / POCO</span>:</span>
+            <span>🔬 Radiografía y Solución para <span id="resBrandName" style="color: var(--accent-caramel);">Samsung</span>:</span>
           </div>
-          <div class="stats-row">
-            <div class="stat-pill" id="statRam">
-              Recuperación estimada: <strong>+350 a +550 MB RAM</strong>
+
+          <!-- Tarjeta de Diagnóstico Específico por Marca -->
+          <div class="cause-card">
+            <div class="cause-item">
+              <span class="cause-badge warning">🔍 Radiografía (Lo que está pasando en el fondo)</span>
+              <p class="cause-text" id="brandCauseText">Cargando análisis...</p>
             </div>
-            <div class="stat-pill" id="statBloat">
-              Procesos basura detectables: <strong>15 a 25 servicios</strong>
+            <div class="cause-item">
+              <span class="cause-badge solution">✨ Cómo lo Atendemos en Modus Mobile</span>
+              <p class="cause-text" id="brandSolutionText">Diagnóstico y mantenimiento profesional desde la computadora. Todo de forma segura, 100% sin formatear y con tus fotos y bancos intactos.</p>
+            </div>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat-pill">
+              🔋 <strong>Batería & Calor:</strong> Freno al consumo vampiro y alivio térmico
             </div>
             <div class="stat-pill">
-              Riesgo para fotos y bancos: <strong>0.0% (Sin formatear)</strong>
+              ⚡ <strong>Fluidez:</strong> Respuesta táctil inmediata sin micro-tirones
+            </div>
+            <div class="stat-pill">
+              🔒 <strong>Seguridad:</strong> 100% Sin Formatear (Fotos y bancos intactos)
             </div>
           </div>
 
           <!-- Formulario de Datos del Usuario -->
           <div class="user-lead-form">
-            <span class="form-instruction">Completa tus datos para personalizar tu diagnóstico en WhatsApp:</span>
+            <span class="form-instruction">Completa tus datos para consultar tu caso directamente con Tomás por WhatsApp:</span>
             <div class="lead-fields-grid">
               <div class="lead-field">
                 <label for="leadName">👤 Tu Nombre:</label>
@@ -1061,21 +1124,21 @@
           </div>
 
           <a id="btnWaResult" href="#" target="_blank" rel="noopener" class="btn-wa-quote">
-            Agendar Puesta a Punto por WhatsApp con este Diagnóstico 💬
+            Consultar mi Caso por WhatsApp con Tomás 💬
           </a>
         </div>
 
-        <!-- Desktop QR Callout (visible on PC) -->
+        <!-- Tarjeta QR WhatsApp Directo (Visible en Computador) -->
         <div class="desktop-callout">
           <div class="desktop-callout-inner">
             <div class="qr-container">
               <img id="qrImage" src="" alt="Código QR WhatsApp Modus Mobile">
             </div>
             <div class="desktop-text">
-              <h4>¿Estás navegando desde tu computador?</h4>
-              <p>Apunta la cámara de tu celular a este código QR para abrir el chat de WhatsApp de inmediato con tu diagnóstico pre-cargado. O si estás fuera de Cali, puedes solicitar <strong>Tele-asistencia Remota</strong> conectándolo con cable USB.</p>
+              <h4>📱 Chatear por WhatsApp en tu Celular</h4>
+              <p>Si estás navegando desde tu computador, <strong>apunta la cámara de tu celular a este código QR</strong> para abrir el chat directo con Tomás (+57 318 930 8342) con tu diagnóstico ya cargado.</p>
               <a id="btnWebWa" href="#" target="_blank" rel="noopener" class="btn-wa-direct" style="padding: 9px 18px; font-size: 0.88rem; display: inline-flex;">
-                Abrir en WhatsApp Web desde PC ↗
+                O abrir en WhatsApp Web desde este PC ↗
               </a>
             </div>
           </div>
@@ -1106,11 +1169,11 @@
               <span class="price-currency">COP</span>
             </div>
             <ul class="plan-features">
-              <li>Limpieza profunda de procesos basura del fabricante</li>
-              <li>Bloqueo total de anuncios y notificaciones spam</li>
-              <li>Aceleración de fluidez y respuesta táctil</li>
-              <li>Optimización de consumo y salud de batería</li>
-              <li><strong>100% Sin Formatear</strong> (Fotos y bancos intactos)</li>
+              <li><strong>Alivio de Batería:</strong> Frenamos el consumo vampiro y el sobrecalentamiento</li>
+              <li>Aceleración de fluidez y respuesta táctil inmediata</li>
+              <li>Limpieza de procesos basura y memoria virtual lenta</li>
+              <li>Bloqueo de anuncios molestos y spam comercial</li>
+              <li><strong>100% Sin Formatear</strong> (Fotos, WhatsApp y bancos intactos)</li>
               <li><strong>Cero Apps Instaladas:</strong> Sin falsos limpiadores ni programas sospechosos</li>
               <li>Garantía de satisfacción por 7 días</li>
             </ul>
@@ -1174,6 +1237,14 @@
   <section class="trust-section">
     <div class="container">
       <div class="trust-grid">
+        <div class="trust-card">
+          <div class="trust-icon">🔋</div>
+          <div class="trust-text">
+            <h4>Batería y Alivio Térmico</h4>
+            <p>Al congelar los procesos parásitos del fabricante, el procesador descansa, se enfría y la batería vuelve a rendir su jornada completa.</p>
+          </div>
+        </div>
+
         <div class="trust-card">
           <div class="trust-icon">🛡️</div>
           <div class="trust-text">
@@ -1249,26 +1320,189 @@
     </div>
   </footer>
 
-  <!-- Script Interactivo del Diagnóstico y QR -->
+  <!-- Script Interactivo de Diagnóstico por Marca y QR -->
   <script>
-    const symptomsData = {
-      android: [
-        { id: "lento", text: "🐢 Se traba o va muy lento al abrir aplicaciones", desc: "Saturación de RAM por procesos en segundo plano." },
-        { id: "bateria", text: "🔋 La batería se descarga volando o el celular calienta", desc: "Servicios continuos drenando energía innecesariamente." },
-        { id: "publicidad", text: "📢 Me sale publicidad y notificaciones molestas", desc: "Servicios comerciales y anuncios embebidos por el fabricante." },
-        { id: "memoria", text: "💾 Memoria llena (almacenamiento saturado)", desc: "Caché residual y archivos basura acumulados por meses." },
-        { id: "nuevo", text: "📱 Compré celular nuevo y quiero trasladar todo sin pérdidas", desc: "Migración integral de WhatsApp, fotos y cuentas." }
-      ],
-      apple: [
-        { id: "memoria_ios", text: "💾 Aviso constante: 'Almacenamiento de iPhone casi lleno'", desc: "Caché oculta de WhatsApp, Telegram y fotos duplicadas." },
-        { id: "migracion_ios", text: "📱 Pasar datos a iPhone nuevo (o de Android a iPhone)", desc: "Traspaso blindado de chats de WhatsApp, fotos e iCloud." },
-        { id: "bateria_ios", text: "🔋 Batería se agota rápido / Condición de batería", desc: "Ajuste de apps en segundo plano y consumo vampiro." },
-        { id: "privacidad_ios", text: "🔒 Publicidad en Safari y saturación de aplicaciones", desc: "Perfiles de navegación limpia y descongestión de sistema." }
-      ]
+    const brandKnowledge = {
+      "Samsung": {
+        cause: "<strong>Embotellamiento de memoria:</strong> El sistema fue forzado de fábrica a usar el almacenamiento lento de las fotos como memoria de trabajo, congelando el procesador en cada toque.",
+        solution: "Mediante conexión directa por cable en consola, realizamos una afinación quirúrgica interna que desahoga la memoria, elimina los procesos parásitos y calibra la respuesta táctil. Todo de forma segura, 100% sin formatear y con tus fotos y bancos intactos.",
+        symptoms: [
+          {
+            id: "ram_plus",
+            text: "🐢 Se traba al escribir en el teclado o abrir WhatsApp",
+            radiografia: "<strong>Embotellamiento de memoria:</strong> El sistema fue forzado de fábrica a usar el almacenamiento lento de las fotos como memoria de trabajo, congelando el procesador en cada toque."
+          },
+          {
+            id: "animaciones",
+            text: "⏳ Las aplicaciones abren perezosas y con retraso",
+            radiografia: "<strong>Frenos visuales de fábrica:</strong> Los efectos de pantalla de One UI vienen sobrecargados y agotan la tarjeta gráfica, haciendo que el teléfono responda con segundos de demora."
+          },
+          {
+            id: "wakelocks",
+            text: "🔋 Se descarga solo durante la noche o amanece tibio",
+            radiografia: "<strong>Insomnio de batería:</strong> Servicios invisibles del fabricante se despiertan solos de madrugada transmitiendo datos, impidiendo que el celular entre en reposo profundo."
+          },
+          {
+            id: "dexopt",
+            text: "🔥 Desde que se actualizó se calienta y dura poco",
+            radiografia: "<strong>Desorden post-actualización:</strong> La actualización dejó archivos mal enlazados, obligando al procesador a trabajar al 100% de fuerza incluso para tareas simples."
+          }
+        ]
+      },
+      "Xiaomi / POCO": {
+        cause: "<strong>Monetización comercial de fábrica:</strong> El sistema trae activos motores publicitarios que descargan fotos, noticias y anuncios día y noche, gastando tus datos y batería sin permiso.",
+        symptoms: [
+          {
+            id: "notificaciones",
+            text: "🔕 Mensajes que no llegan a tiempo o aplicaciones que se cierran solas",
+            radiografia: "<strong>Gestor de batería hiper-agresivo:</strong> El sistema apaga a la fuerza tus aplicaciones de trabajo y mensajería en segundo plano para simular ahorro de energía, bloqueando las notificaciones."
+          },
+          {
+            id: "publicidad",
+            text: "📢 Publicidad y noticias invasivas en la pantalla de bloqueo y menús",
+            radiografia: "<strong>Monetización comercial de fábrica:</strong> El sistema trae activos motores publicitarios que descargan fotos, noticias y anuncios día y noche, gastando tus datos y batería sin permiso."
+          },
+          {
+            id: "bateria_reposo",
+            text: "🔋 Se descarga volando en reposo y calienta la parte trasera",
+            radiografia: "<strong>Telemetría oculta en bucle:</strong> Servicios internos del fabricante se quedan transmitiendo datos y diagnósticos sin parar, manteniendo el procesador caliente y activo aún con la pantalla apagada."
+          },
+          {
+            id: "tirones",
+            text: "🐢 Pantalla con tirones y arrastre lento al deslizar en redes",
+            radiografia: "<strong>Freno de refresco visual:</strong> El sistema limita la fluidez de la pantalla a una velocidad inferior a la que el panel soporta, provocando saltos y pesadez al deslizar con el dedo."
+          }
+        ]
+      },
+      "Motorola": {
+        cause: "<strong>Servicios parásitos del operador:</strong> Aplicaciones comerciales preinstaladas por la empresa de telefonía y el fabricante siguen corriendo de fondo, impidiendo que el procesador descanse.",
+        symptoms: [
+          {
+            id: "bateria_operador",
+            text: "🔋 Se descarga solo en reposo o no llega al final de la tarde",
+            radiografia: "<strong>Servicios parásitos del operador:</strong> Aplicaciones comerciales preinstaladas por la empresa de telefonía y el fabricante siguen corriendo de fondo, impidiendo que el procesador descanse."
+          },
+          {
+            id: "camara_lenta",
+            text: "📸 La cámara tarda segundos en abrir o se traba al tomar fotos",
+            radiografia: "<strong>Congestión de memoria en cámara:</strong> El procesador se queda sin memoria limpia para procesar la foto de inmediato, provocando demoras y bloqueos molestos al disparar."
+          },
+          {
+            id: "teclado_retraso",
+            text: "🐢 Teclado con retraso y lentitud al cambiar de aplicaciones",
+            radiografia: "<strong>Falta de aceleración táctil:</strong> Las transiciones visuales vienen descalibradas de fábrica, haciendo que el teclado y las pantallas respondan con retraso al toque de tus dedos."
+          },
+          {
+            id: "post_update_moto",
+            text: "🔥 Se recalienta y va más lento desde la última actualización",
+            radiografia: "<strong>Desorden post-actualización:</strong> La actualización del sistema dejó librerías internas desalineadas, forzando al procesador a trabajar con sobreesfuerzo térmico continuo."
+          }
+        ]
+      },
+      "OPPO / Realme": {
+        cause: "<strong>Saturación de almacenamiento:</strong> La memoria virtual activada de fábrica satura el almacenamiento interno y frena el procesador.",
+        symptoms: [
+          {
+            id: "oppo_camara",
+            text: "🐢 Se congela al abrir la cámara o cambiar entre aplicaciones",
+            radiografia: "<strong>Saturación de almacenamiento:</strong> La memoria virtual activada de fábrica satura el almacenamiento interno y frena el intercambio de datos del procesador."
+          },
+          {
+            id: "oppo_notificaciones",
+            text: "🔕 Los mensajes y notificaciones no entran hasta que abres la aplicación",
+            radiografia: "<strong>Falso ahorro en reposo:</strong> El optimizador de fábrica apaga conexiones vitales en segundo plano para aparentar falsamente que la batería dura más."
+          },
+          {
+            id: "oppo_calor",
+            text: "🔥 El teléfono calienta y la batería se agota rápido aun con poco uso",
+            radiografia: "<strong>Telemetría continua del fabricante:</strong> Servicios de sincronización y personalización inteligente operan continuamente con la pantalla apagada."
+          },
+          {
+            id: "oppo_anuncios",
+            text: "📢 Avisos invasivos, juegos que aparecen solos y publicidad en pantalla",
+            radiografia: "<strong>Monetización comercial preinstalada:</strong> Canales comerciales y tiendas de aplicaciones integradas de fábrica ejecutan tareas publicitarias sin tu autorización."
+          }
+        ]
+      },
+      "Tecno / Infinix": {
+        cause: "<strong>Subprocesos publicitarios continuos:</strong> Tiendas y asistentes integrados de fábrica ejecutan tareas comerciales que consumen la memoria y la batería.",
+        symptoms: [
+          {
+            id: "tecno_anuncios",
+            text: "📢 El teléfono se llena de anuncios, juegos no deseados y avisos constantes",
+            radiografia: "<strong>Subprocesos publicitarios continuos:</strong> Tiendas y asistentes integrados de fábrica ejecutan tareas comerciales que consumen la memoria y la batería."
+          },
+          {
+            id: "tecno_teclado",
+            text: "🐢 Tarda una eternidad en responder al escribir o tocar la pantalla",
+            radiografia: "<strong>Cuello de botella de memoria:</strong> La ampliación virtual de memoria sobrecarga un almacenamiento básico, colapsando la fluidez del procesador."
+          },
+          {
+            id: "tecno_cierre_apps",
+            text: "🔕 Cierra las aplicaciones de repente y no suenan alarmas ni avisos",
+            radiografia: "<strong>Corte indiscriminado de tareas:</strong> Su optimizador interno apaga procesos vitales del sistema operativo para forzar cifras de autonomía."
+          },
+          {
+            id: "tecno_drenaje",
+            text: "🔋 Amanece con mucha menos batería sin haberlo tocado en la noche",
+            radiografia: "<strong>Insomnio por búsqueda de red:</strong> Servicios de actualización y búsqueda constante de servidores impiden que el equipo entre en reposo profundo."
+          }
+        ]
+      },
+      "Apple iPhone": {
+        cause: "<strong>Retención de registros residuales:</strong> Archivos de diagnóstico acumulados, cachés de apps y sincronizaciones incompletas quedan atrapados en la memoria interna.",
+        symptoms: [
+          {
+            id: "iphone_datos_sistema",
+            text: "💾 El almacenamiento se llena solo en 'Datos del Sistema' y no se puede borrar",
+            radiografia: "<strong>Retención de registros residuales:</strong> Archivos de diagnóstico acumulados, caché residual y sincronizaciones incompletas quedan atrapados en la memoria interna."
+          },
+          {
+            id: "iphone_bateria_falsa",
+            text: "🔋 La batería dura poco a pesar de que en Ajustes dice tener buena salud",
+            radiografia: "<strong>Desgaste químico o procesos en bucle:</strong> Desgaste real de celdas no reflejado por el sistema o tareas en segundo plano impidiendo el reposo del chip."
+          },
+          {
+            id: "iphone_pantalla_calor",
+            text: "🔥 La pantalla baja el brillo sola y el teléfono se siente muy caliente",
+            radiografia: "<strong>Protección térmica forzada:</strong> El procesador limita su potencia y atenúa la pantalla ante sobrecarga continua de indexación o exigencia de voltaje."
+          },
+          {
+            id: "iphone_reinicios",
+            text: "⚠️ El equipo se traba, se calienta o se reinicia de la nada",
+            radiografia: "<strong>Inestabilidad en registros internos:</strong> Errores en la telemetría del sistema y controladores que requieren diagnóstico técnico profesional desde la computadora."
+          }
+        ]
+      },
+      "Otra marca": {
+        cause: "<strong>Gestión agresiva de memoria:</strong> El sistema desaloja tus aplicaciones abiertas para dar prioridad a funciones decorativas de la capa del fabricante.",
+        symptoms: [
+          {
+            id: "otra_cierre",
+            text: "🐢 Las aplicaciones se cierran o reinician solas al salir un segundo de ellas",
+            radiografia: "<strong>Gestión agresiva de memoria:</strong> El sistema desaloja tus aplicaciones abiertas para dar prioridad a funciones decorativas de la capa del fabricante."
+          },
+          {
+            id: "otra_calor",
+            text: "🔥 El equipo calienta y la batería baja rápido aun con poco uso",
+            radiografia: "<strong>Sincronización continua de cuentas:</strong> Servicios de cuenta, sincronización en la nube del fabricante y tiendas integradas operan en bucle constante."
+          },
+          {
+            id: "otra_red_reposo",
+            text: "🔕 No entran llamadas ni mensajes si la pantalla lleva un rato apagada",
+            radiografia: "<strong>Desconexión forzada de red:</strong> Políticas estrictas de ahorro cortan la energía de los controladores de red cuando el dispositivo entra en reposo."
+          },
+          {
+            id: "otra_lentitud",
+            text: "⏳ Tarda en abrir fotos, archivos o al navegar entre menús",
+            radiografia: "<strong>Saturación de índices internos:</strong> El índice interno de archivos y registros residuales acumulados impiden una lectura ágil del almacenamiento."
+          }
+        ]
+      }
     };
 
-    let selectedBrand = "Xiaomi / POCO";
-    let selectedSymptom = symptomsData.android[0];
+    let selectedBrand = "Samsung";
+    let selectedSymptom = brandKnowledge["Samsung"].symptoms[0];
 
     function selectBrand(btnElement) {
       document.querySelectorAll('#brandGrid .opt-btn').forEach(btn => btn.classList.remove('active'));
@@ -1286,18 +1520,17 @@
     }
 
     function renderSymptoms() {
-      const isApple = selectedBrand === "Apple iPhone";
-      const list = isApple ? symptomsData.apple : symptomsData.android;
-      selectedSymptom = list[0];
+      const data = brandKnowledge[selectedBrand] || brandKnowledge["Otra marca"];
+      selectedSymptom = data.symptoms[0];
 
       const container = document.getElementById('symptomsList');
       container.innerHTML = "";
 
-      list.forEach((symptom, index) => {
+      data.symptoms.forEach((symptom, index) => {
         const btn = document.createElement('button');
         btn.type = 'button';
         btn.className = 'symptom-btn' + (index === 0 ? ' active' : '');
-        btn.innerHTML = `<span>${symptom.text}</span>`;
+        btn.innerHTML = `<span><strong>${symptom.text}</strong></span>`;
         btn.onclick = () => selectSymptom(btn, symptom);
         container.appendChild(btn);
       });
@@ -1305,21 +1538,17 @@
 
     function updateResult() {
       const resBrandName = document.getElementById('resBrandName');
-      const statRam = document.getElementById('statRam');
-      const statBloat = document.getElementById('statBloat');
+      const brandCauseText = document.getElementById('brandCauseText');
+      const brandSolutionText = document.getElementById('brandSolutionText');
       const btnWa = document.getElementById('btnWaResult');
       const btnWebWa = document.getElementById('btnWebWa');
       const qrImage = document.getElementById('qrImage');
 
-      resBrandName.innerText = selectedBrand;
+      const data = brandKnowledge[selectedBrand] || brandKnowledge["Otra marca"];
 
-      if (selectedBrand === "Apple iPhone") {
-        statRam.innerHTML = "Optimización: <strong>Descongestión de Almacenamiento</strong>";
-        statBloat.innerHTML = "Diagnóstico: <strong>Caché oculta & Traslado Seguro</strong>";
-      } else {
-        statRam.innerHTML = "Recuperación estimada: <strong>+350 a +550 MB RAM</strong>";
-        statBloat.innerHTML = "Procesos basura detectables: <strong>15 a 25 servicios</strong>";
-      }
+      resBrandName.innerText = selectedBrand;
+      brandCauseText.innerHTML = selectedSymptom.radiografia || data.cause;
+      brandSolutionText.innerText = "Diagnóstico y mantenimiento profesional desde la computadora. Todo de forma segura, 100% sin formatear y con tus fotos y bancos intactos.";
 
       // Customer Form Details
       const leadName = (document.getElementById('leadName') ? document.getElementById('leadName').value : '').trim();
@@ -1327,7 +1556,7 @@
       const symptomClean = selectedSymptom.text.replace(/^[^\s]+\s/, '');
 
       // Structured Rich WhatsApp Message
-      let textMsg = `👋 *¡Hola Tomás! Acabo de hacer el diagnóstico en la web de Modus Mobile.*\n\n`;
+      let textMsg = `👋 *¡Hola Tomás! Acabo de ver el análisis para mi ${selectedBrand} en Modus Mobile.*\n\n`;
       textMsg += `📋 *Ficha de mi Solicitud:*\n`;
       if (leadName) {
         textMsg += `• *Nombre:* ${leadName}\n`;
@@ -1337,18 +1566,20 @@
       }
       textMsg += `• *Equipo:* ${selectedBrand}\n`;
       textMsg += `• *Molestia:* ${symptomClean}\n\n`;
-      textMsg += `⚡ *Me interesa aprovechar el Bono de Inauguración ($50.000 COP).*\n`;
-      textMsg += `¿Qué disponibilidad de agenda tienes para coordinar la cita?`;
+      textMsg += `⚡ *Me interesa optimizar mi celular sin formatear y con el Bono de Inauguración ($50.000 COP).*\n`;
+      textMsg += `¿Qué disponibilidad tienes para coordinar la cita?`;
 
       const encodedMsg = encodeURIComponent(textMsg);
       const waLink = `https://wa.me/573189308342?text=${encodedMsg}`;
 
       btnWa.href = waLink;
-      btnWebWa.href = waLink;
+      if (btnWebWa) btnWebWa.href = waLink;
 
       // Update QR Code
-      const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent(waLink)}`;
-      qrImage.src = qrUrl;
+      if (qrImage) {
+        const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent(waLink)}`;
+        qrImage.src = qrUrl;
+      }
     }
 
     // Initialize on page load
