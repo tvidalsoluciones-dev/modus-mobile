@@ -52,6 +52,14 @@
       --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
+    section[id] {
+      scroll-margin-top: 110px;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -80,8 +88,7 @@
 
     /* Header / Nav */
     header {
-      padding: 16px 0;
-      background: rgba(250, 248, 245, 0.94);
+      background: rgba(250, 248, 245, 0.96);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border-soft);
       position: sticky;
@@ -90,20 +97,23 @@
     }
 
     .nav-inner {
+      padding: 12px 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 16px;
     }
 
     .brand {
       display: flex;
       align-items: center;
       gap: 12px;
+      text-decoration: none;
     }
 
     .brand img {
-      width: 44px;
-      height: 44px;
+      width: 42px;
+      height: 42px;
       border-radius: 12px;
       object-fit: cover;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -111,18 +121,65 @@
     }
 
     .brand-text h1 {
-      font-size: 1.25rem;
+      font-size: 1.22rem;
       font-weight: 800;
       letter-spacing: -0.5px;
       color: var(--text-main);
     }
 
     .brand-text p {
-      font-size: 0.72rem;
+      font-size: 0.70rem;
       color: var(--accent-warm);
       text-transform: uppercase;
       letter-spacing: 1px;
       font-weight: 700;
+    }
+
+    /* Desktop Navigation Menu */
+    .nav-menu {
+      display: none;
+      align-items: center;
+      gap: 20px;
+    }
+
+    @media (min-width: 860px) {
+      .nav-menu {
+        display: flex;
+      }
+    }
+
+    .nav-link {
+      font-size: 0.90rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+      padding: 6px 2px;
+      position: relative;
+    }
+
+    .nav-link:hover {
+      color: var(--accent-caramel);
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--accent-caramel);
+      transition: width 0.2s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
     .btn-nav-wa {
@@ -137,11 +194,160 @@
       gap: 8px;
       box-shadow: 0 4px 14px rgba(37, 211, 102, 0.25);
       transition: transform 0.2s, background-color 0.2s;
+      white-space: nowrap;
     }
 
     .btn-nav-wa:hover {
       background: var(--accent-green-hover);
       transform: translateY(-1px);
+    }
+
+    /* Mobile Quick Navigation Bar */
+    .nav-quick-bar-wrap {
+      border-top: 1px solid var(--border-soft);
+      background: rgba(244, 239, 234, 0.75);
+    }
+
+    @media (min-width: 860px) {
+      .nav-quick-bar-wrap {
+        display: none;
+      }
+    }
+
+    .nav-quick-bar {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 8px 20px;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .nav-quick-bar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav-quick-pill {
+      white-space: nowrap;
+      font-size: 0.80rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      background: var(--bg-surface);
+      color: var(--text-main);
+      border: 1px solid var(--border-soft);
+      border-radius: 20px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+      transition: all 0.2s ease;
+    }
+
+    .nav-quick-pill:hover,
+    .nav-quick-pill:active {
+      background: var(--accent-tint);
+      border-color: var(--accent-caramel);
+      color: var(--accent-caramel);
+    }
+
+    /* Menú / Lista de Acceso Rápido al Principio */
+    .quick-index-section {
+      padding: 0 0 36px;
+    }
+
+    .quick-index-card {
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-soft);
+      border-radius: 18px;
+      padding: 20px 22px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .quick-index-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .quick-index-title {
+      font-size: 0.86rem;
+      font-weight: 800;
+      color: var(--accent-warm);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .quick-index-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    @media (min-width: 640px) {
+      .quick-index-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 992px) {
+      .quick-index-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .quick-index-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 14px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-soft);
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .quick-index-item:hover {
+      background: var(--accent-tint);
+      border-color: var(--accent-caramel);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(194, 65, 12, 0.08);
+    }
+
+    .quick-index-icon {
+      font-size: 1.35rem;
+      flex-shrink: 0;
+      background: #FFFFFF;
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border-soft);
+    }
+
+    .quick-index-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .quick-index-name {
+      font-size: 0.90rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .quick-index-desc {
+      font-size: 0.76rem;
+      color: var(--text-muted);
     }
 
     /* Hero Section */
@@ -975,19 +1181,40 @@
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- Navbar con Menú y Accesos Directos -->
   <header>
     <div class="container nav-inner">
-      <div class="brand">
+      <a href="#" class="brand">
         <img src="logo.jpg" alt="Modus Mobile Logo">
         <div class="brand-text">
           <h1>MODUS MOBILE</h1>
           <p>Cuidado y Rendimiento Móvil</p>
         </div>
-      </div>
-      <a href="https://wa.me/573189308342?text=Hola%20Tom%C3%A1s%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Modus%20Mobile%20en%20Cali." class="btn-nav-wa" target="_blank" rel="noopener">
-        <span>WhatsApp</span> 💬
       </a>
+
+      <!-- Menú Desktop -->
+      <nav class="nav-menu">
+        <a href="#diagnostico" class="nav-link">Diagnóstico por Marca</a>
+        <a href="#tarifas" class="nav-link">Tarifas y Planes</a>
+        <a href="#garantias" class="nav-link">Por qué Modus Mobile</a>
+        <a href="#faq" class="nav-link">Preguntas Frecuentes</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://wa.me/573189308342?text=Hola%20Tom%C3%A1s%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Modus%20Mobile%20en%20Cali." class="btn-nav-wa" target="_blank" rel="noopener">
+          <span>WhatsApp</span> 💬
+        </a>
+      </div>
+    </div>
+
+    <!-- Menú Rápido Móvil (Pills Horizontales Deslizables) -->
+    <div class="nav-quick-bar-wrap">
+      <div class="container nav-quick-bar">
+        <a href="#diagnostico" class="nav-quick-pill">🔍 Diagnóstico</a>
+        <a href="#tarifas" class="nav-quick-pill">💰 Tarifas</a>
+        <a href="#garantias" class="nav-quick-pill">🛡️ Garantías</a>
+        <a href="#faq" class="nav-quick-pill">❓ Preguntas</a>
+      </div>
     </div>
   </header>
 
@@ -1029,6 +1256,47 @@
       </div>
     </div>
   </section>
+
+  <!-- Lista / Menú de Acceso Rápido por Secciones al Principio -->
+  <div class="quick-index-section">
+    <div class="container">
+      <div class="quick-index-card">
+        <div class="quick-index-header">
+          <span class="quick-index-title">🧭 Explora los servicios de Modus Mobile:</span>
+        </div>
+        <div class="quick-index-grid">
+          <a href="#diagnostico" class="quick-index-item">
+            <div class="quick-index-icon">🔍</div>
+            <div class="quick-index-text">
+              <span class="quick-index-name">Diagnóstico por Marca</span>
+              <span class="quick-index-desc">Samsung, Xiaomi, Moto, iPhone...</span>
+            </div>
+          </a>
+          <a href="#tarifas" class="quick-index-item">
+            <div class="quick-index-icon">💰</div>
+            <div class="quick-index-text">
+              <span class="quick-index-name">Tarifas y Precios</span>
+              <span class="quick-index-desc">Planes desde $50.000 COP</span>
+            </div>
+          </a>
+          <a href="#garantias" class="quick-index-item">
+            <div class="quick-index-icon">🛡️</div>
+            <div class="quick-index-text">
+              <span class="quick-index-name">Por qué Modus Mobile</span>
+              <span class="quick-index-desc">100% Sin formatear ni apps</span>
+            </div>
+          </a>
+          <a href="#faq" class="quick-index-item">
+            <div class="quick-index-icon">❓</div>
+            <div class="quick-index-text">
+              <span class="quick-index-name">Preguntas Frecuentes</span>
+              <span class="quick-index-desc">Tiempos, bancos y citas en Cali</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Diagnostic Tool -->
   <section id="diagnostico" class="diagnostic-section">
@@ -1149,7 +1417,7 @@
   </section>
 
   <!-- Pricing Section -->
-  <section class="pricing-section">
+  <section id="tarifas" class="pricing-section">
     <div class="container">
       <div class="section-header">
         <h3>Tarifas Claras y Transparentes</h3>
@@ -1234,7 +1502,7 @@
   </section>
 
   <!-- Trust Badges -->
-  <section class="trust-section">
+  <section id="garantias" class="trust-section">
     <div class="container">
       <div class="trust-grid">
         <div class="trust-card">
@@ -1281,7 +1549,7 @@
   </section>
 
   <!-- FAQ Section -->
-  <section class="faq-section">
+  <section id="faq" class="faq-section">
     <div class="container">
       <div class="section-header">
         <h3>Preguntas Frecuentes</h3>
